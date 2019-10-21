@@ -1,0 +1,19 @@
+---
+- name: run_webserver.yml
+  hosts: all
+  tasks:
+  - name: install httpd server 
+    yum:
+      name: httpd
+      state: present
+
+  - name: create webpage
+    copy:
+      content: "<p>Hi Ritesh!!!</p>"
+      dest: /var/www/html/index.html
+
+  - name: restart the httpd service
+    service:
+      name: httpd
+      state: restarted
+      enabled: true
