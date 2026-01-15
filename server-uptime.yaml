@@ -4,3 +4,7 @@
   tasks:
   - name: To know the uptime of server
     shell: uptime
+    register: server_uptime
+  - name: Print the uptime
+    debug:
+      msg: "The uptime of {{ inventory_hostname }} is {{ server_uptime.stdout}}"
