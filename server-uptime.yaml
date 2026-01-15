@@ -1,5 +1,5 @@
 ---
-- name: run_webserver.yml
+- name: server uptime
   hosts: all
   tasks:
   - name: To know the uptime of server
