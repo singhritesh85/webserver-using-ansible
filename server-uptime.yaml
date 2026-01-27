@@ -7,4 +7,4 @@
     register: server_uptime
   - name: Print the uptime
     debug:
-      msg: "The uptime of {{ inventory_hostname }} is {{ server_uptime.stdout}}"
+      msg: "The uptime of {{ inventory_hostname }} is {{ server_uptime.stdout }}"
